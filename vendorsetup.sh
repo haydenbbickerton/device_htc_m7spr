@@ -1,1 +1,3 @@
-add_lunch_combo cm_m7spr-eng
+add_lunch_combo full_m7spr-codefirex
+add_lunch_combo full_m7spr-eng
+add_lunch_combo full_m7spr-userdebug

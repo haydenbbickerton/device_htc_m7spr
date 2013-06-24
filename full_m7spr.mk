@@ -21,12 +21,29 @@
 # lines, full and maguro, hence its name.
 #
 
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from m7spr device
 $(call inherit-product, device/htc/m7spr/device.mk)
+
+ifneq ($(TARGET_BUILD_VARIANT),codefirex)
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+else
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/cfx/config/cdma.mk)
+
+$(call inherit-product, vendor/cfx/config/common_full_phone.mk)
+
+# Copy Bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/cfx/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
+endif
+
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m7wls BUILD_ID=JZO54K 
+BUILD_FINGERPRINT="htc/m7wls/m7wls:4.1.2/JZO54K/166937.7:user/release-keys" PRIVATE_BUILD_DESC="1.29.651.7 CL166937 
+release-keys"
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_m7spr
