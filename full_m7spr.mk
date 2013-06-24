@@ -42,8 +42,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m7wls BUILD_ID=JZO54K 
-BUILD_FINGERPRINT="htc/m7wls/m7wls:4.1.2/JZO54K/166937.7:user/release-keys" PRIVATE_BUILD_DESC="1.29.651.7 CL166937 
-release-keys"
+BUILD_FINGERPRINT="htc/m7wls/m7wls:4.1.2/JZO54K/166937.7:user/release-keys" PRIVATE_BUILD_DESC="1.29.651.7 CL166937 release-keys"
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_m7spr
