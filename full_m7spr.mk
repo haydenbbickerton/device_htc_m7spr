@@ -38,7 +38,7 @@ $(call inherit-product, vendor/cfx/config/common_full_phone.mk)
 
 # Copy Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/cfx/prebuilt/common/bootanimation/480.zip:system/media/bootanimation.zip
+    vendor/cfx/prebuilt/common/bootanimation/720.zip:system/media/bootanimation.zip
 endif
 
 # Set those variables here to overwrite the inherited values.
